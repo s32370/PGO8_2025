@@ -1,4 +1,4 @@
-public abstract class Book implements MediaItem, Rentable {
+public class Book implements MediaItem, Rentable {
         private String title;
         private String author;
         private int publicationYear;
@@ -12,21 +12,11 @@ public abstract class Book implements MediaItem, Rentable {
             this.isbn = isbn;
             this.available = true;
         }
-
         @Override
-        public String getTitle() {
-            return title;
-        }
+        public void getDisplayString();{
+            System.out.println("Title: " + title);
+    }
 
-        @Override
-        public int getYear() {
-            return publicationYear;
-        }
-
-        @Override
-        public String getDisplayString() {
-            return "Book: " + title + " by " + author + " (" + publicationYear + "), ISBN: " + isbn;
-        }
 
         @Override
         public boolean isAvailable() {

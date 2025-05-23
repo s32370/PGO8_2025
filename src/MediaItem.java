@@ -3,6 +3,8 @@ public interface MediaItem {
 
     String getTitle();
     int getYear();
-    String getDispalyString();
+    void getDisplayString(){
+        System.out.println(getTitle());
 
+    };
 }
